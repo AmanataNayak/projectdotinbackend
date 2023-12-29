@@ -17,7 +17,7 @@ export class ProjectsService {
     if(!file){
       throw new BadRequestException('File is not an image');
     }else{
-      project.imageUrl=  `https://rigid-ticket-production.up.railway.app//projects/pictures/${file.filename}`
+      project.imageUrl=  `https://rigid-ticket-production.up.railway.app/projects/pictures/${file.filename}`
     }
     Object.assign(project,createProjectDto);
 
@@ -46,7 +46,7 @@ export class ProjectsService {
     if(project.imageUrl && file){
       const imagePath = path.join('./uploads',project.imageUrl.split('/')[project.imageUrl.split('/').length-1]);
       fs.unlinkSync(imagePath);
-      project.imageUrl = `https://rigid-ticket-production.up.railway.app//${file.filename}`;
+      project.imageUrl = `https://rigid-ticket-production.up.railway.app/projects/pictures/${file.filename}`;
     }}catch(error){}
 
     project.modifiedOn= new Date(Date.now());
