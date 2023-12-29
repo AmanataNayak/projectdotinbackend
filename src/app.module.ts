@@ -8,10 +8,10 @@ import { CategoryModule } from './category/category.module';
   imports: [
     TypeOrmModule.forRoot({
       type:'mysql',
-      host:'localhost',
-      database:'Project-dot-in',
-      username: 'root',
-      password:'root',
+      host:'103.93.16.46',
+      database:'projec15_ProjectDotIn',
+      username: 'projec15_projec15',
+      password:'Amanata@2004',
       port:3306,
       autoLoadEntities:true,
       synchronize:true
